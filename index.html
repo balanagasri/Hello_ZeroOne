@@ -5,18 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello ZeroOne</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heading h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .action-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .action-button:hover {
+            background-color: #45a049;
+        }
+
+        .welcome-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            color: #155724;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="heading">
-            <h1>Helloww ZeroOne!</h1>
+            <h1>Hello ZeroOne!</h1>
         </div>
 
         <div class="post-heading">
             <table>
                 <tr>
                     <th>Student ID Number</th>
-                    <th>Student Name as per ERP Records</th>
+                    <th>Student Name</th>
                     <th>Branch</th>
                     <th>Greet ZeroOne</th>
                 </tr>
@@ -26,8 +91,34 @@
                     <td>CSE Hons</td>
                     <td>Namasthe!</td>
                 </tr>
+                <tr>
+                    <td>2100031825</td>
+                    <td>xyz</td>
+                    <td>EE Hons</td>
+                    <td>Hello ZeroOne!</td>
+                </tr>
+                <tr>
+                    <td>2100031833</td>
+                    <td>abc</td>
+                    <td>ME Hons</td>
+                    <td>Hi there!</td>
+                </tr>
             </table>
         </div>
+
+        <div class="button-container">
+            <button class="action-button" onclick="greetAll()">Greet All</button>
+        </div>
+
+        <div class="welcome-message" id="welcomeMessage"></div>
     </div>
+
+    <script src="script.js"></script>
+    <script>
+        function greetAll() {
+            var welcomeMessage = document.getElementById('welcomeMessage');
+            welcomeMessage.innerHTML = 'Greetings to all students from ZeroOne!';
+        }
+    </script>
 </body>
 </html>
